@@ -1,0 +1,8 @@
+<p>shipping works!</p>
+
+<div>
+  <p *ngFor="let cost of shippingCosts | async">
+    <span>{{ cost.type }}</span>
+    <span> {{ cost.price | currency }}</span>
+  </p>
+</div>

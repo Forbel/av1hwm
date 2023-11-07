@@ -1,0 +1,30 @@
+<p *dir="items">cart works!!!!</p>
+
+<div>
+  <a class="button fancy-button" routerLink="/shipping">Shipping</a>
+</div>
+
+<div>
+  <div *ngFor="let product of items">
+    <span>{{ product.name }}</span>
+    <span>{{ product.price | currency }}</span>
+  </div>
+</div>
+
+<form [formGroup]="chechoutForm" (ngSubmit)="onSubmit()">
+  <main>
+    <div>
+      <label for="name">Name</label>
+
+      <input type="text" formControlName="name" />
+    </div>
+
+    <div>
+      <label for="name">Address</label>
+
+      <input type="text" formControlName="address" />
+    </div>
+  </main>
+
+  <button type="submit">submit</button>
+</form>
